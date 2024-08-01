@@ -1,7 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
-    FhsAppComponents();
-});
-
+// Function to dynamically add CSS
 function addFhsAppCSS() {
     const cssLinks = [
         'https://cdn.statically.io/gist/fuadhasanshihab/352bd105cf37a0afc655ffcd8f236baa/raw/925bfacb465c9d129437921541c1897020890a31/fhs.app.style.css',
@@ -15,9 +12,9 @@ function addFhsAppCSS() {
         linkElement.href = link;
         document.head.appendChild(linkElement);
     });
-    console.log('CSS added');
 }
 
+// Function to dynamically add JS
 function addFhsAppJS() {
     const jsScripts = [
         'https://cdn.statically.io/gist/fuadhasanshihab/352bd105cf37a0afc655ffcd8f236baa/raw/925bfacb465c9d129437921541c1897020890a31/zuck.min.js',
@@ -31,11 +28,11 @@ function addFhsAppJS() {
     jsScripts.forEach(src => {
         const scriptElement = document.createElement('script');
         scriptElement.src = src;
-        scriptElement.onload = () => console.log(`Script loaded: ${src}`);
         document.head.appendChild(scriptElement);
     });
 }
 
+// Function to handle FHS app components
 function FhsAppComponents() {
     if (window.matchMedia('(display-mode: browser)').matches) {
         addFhsAppCSS();
@@ -45,46 +42,30 @@ function FhsAppComponents() {
         FhsAppHeader();
         FhsAppNotification();
         FhsAppBottomBar();
-    } else {
-        console.log('Not in standalone mode');
     }
 }
 
+// Define HTML component functions
 function FhsAppHeader() {
     const headerContent = `
         <header class="fhs-app-header">Header Content</header>
     `;
-    const blogCont = document.querySelector('.blogCont');
-    if (blogCont) {
-        blogCont.insertAdjacentHTML('beforeend', headerContent);
-        console.log('Header inserted');
-    } else {
-        console.error('.blogCont element not found');
-    }
+    document.querySelector('.blogCont').insertAdjacentHTML('beforeend', headerContent);
 }
 
 function FhsAppNotification() {
     const notificationContent = `
         <div class="fhs-app-notification">Notification Content</div>
     `;
-    const blogCont = document.querySelector('.blogCont');
-    if (blogCont) {
-        blogCont.insertAdjacentHTML('beforeend', notificationContent);
-        console.log('Notification inserted');
-    } else {
-        console.error('.blogCont element not found');
-    }
+    document.querySelector('.blogCont').insertAdjacentHTML('beforeend', notificationContent);
 }
 
 function FhsAppBottomBar() {
     const bottomBarContent = `
         <footer class="fhs-app-bottom-bar">Bottom Bar Content</footer>
     `;
-    const blogCont = document.querySelector('.blogCont');
-    if (blogCont) {
-        blogCont.insertAdjacentHTML('beforeend', bottomBarContent);
-        console.log('Bottom Bar inserted');
-    } else {
-        console.error('.blogCont element not found');
-    }
+    document.querySelector('.blogCont').insertAdjacentHTML('beforeend', bottomBarContent);
 }
+
+// Check FHS-app mode on load
+FhsAppComponents();

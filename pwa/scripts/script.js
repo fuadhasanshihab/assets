@@ -62,8 +62,6 @@ function FhsAppComponents() {
     if (window.matchMedia('(display-mode: browser)').matches) {
         addFhsAppCSS();
         addFhsAppJS();
-
-        // Insert HTML content
         FhsAppHeader();
         FhsAppNotification();
         FhsAppBottomBar();

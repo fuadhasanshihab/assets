@@ -1,4 +1,7 @@
-// Function to dynamically add CSS
+document.addEventListener('DOMContentLoaded', () => {
+    FhsAppComponents();
+});
+
 function addFhsAppCSS() {
     const cssLinks = [
         'https://cdn.statically.io/gist/fuadhasanshihab/352bd105cf37a0afc655ffcd8f236baa/raw/925bfacb465c9d129437921541c1897020890a31/fhs.app.style.css',
@@ -14,7 +17,6 @@ function addFhsAppCSS() {
     });
 }
 
-// Function to dynamically add JS
 function addFhsAppJS() {
     const jsScripts = [
         'https://cdn.statically.io/gist/fuadhasanshihab/352bd105cf37a0afc655ffcd8f236baa/raw/925bfacb465c9d129437921541c1897020890a31/zuck.min.js',
@@ -32,7 +34,6 @@ function addFhsAppJS() {
     });
 }
 
-// Function to handle FHS app components
 function FhsAppComponents() {
     if (window.matchMedia('(display-mode: browser)').matches) {
         addFhsAppCSS();
@@ -45,7 +46,6 @@ function FhsAppComponents() {
     }
 }
 
-// Define HTML component functions
 function FhsAppHeader() {
     const headerContent = `
         <header class="fhs-app-header">Header Content</header>
@@ -66,6 +66,3 @@ function FhsAppBottomBar() {
     `;
     document.querySelector('.blogCont').insertAdjacentHTML('beforeend', bottomBarContent);
 }
-
-// Check FHS-app mode on load
-FhsAppComponents();

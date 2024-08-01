@@ -15,7 +15,6 @@ function addFhsAppCSS() {
         linkElement.href = link;
         document.head.appendChild(linkElement);
     });
-    console.log('CSS added');
 }
 
 function addFhsAppJS() {
@@ -31,7 +30,6 @@ function addFhsAppJS() {
     jsScripts.forEach(src => {
         const scriptElement = document.createElement('script');
         scriptElement.src = src;
-        scriptElement.onload = () => console.log(`Script loaded: ${src}`);
         document.head.appendChild(scriptElement);
     });
 }
@@ -45,8 +43,6 @@ function FhsAppComponents() {
         FhsAppHeader();
         FhsAppNotification();
         FhsAppBottomBar();
-    } else {
-        console.log('Not in standalone mode');
     }
 }
 
@@ -57,9 +53,6 @@ function FhsAppHeader() {
     const blogCont = document.querySelector('.blogCont');
     if (blogCont) {
         blogCont.insertAdjacentHTML('beforeend', headerContent);
-        console.log('Header inserted');
-    } else {
-        console.error('.blogCont element not found');
     }
 }
 
@@ -70,9 +63,6 @@ function FhsAppNotification() {
     const blogCont = document.querySelector('.blogCont');
     if (blogCont) {
         blogCont.insertAdjacentHTML('beforeend', notificationContent);
-        console.log('Notification inserted');
-    } else {
-        console.error('.blogCont element not found');
     }
 }
 
@@ -83,8 +73,5 @@ function FhsAppBottomBar() {
     const blogCont = document.querySelector('.blogCont');
     if (blogCont) {
         blogCont.insertAdjacentHTML('beforeend', bottomBarContent);
-        console.log('Bottom Bar inserted');
-    } else {
-        console.error('.blogCont element not found');
     }
 }

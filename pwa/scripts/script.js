@@ -45,19 +45,26 @@ checkFhsAppMode();
 
 function FhsAppComponents() {
     if (window.matchMedia('(display-mode: standalone)').matches) {
-        // HTML content for all components
-        const FhsAppComponentsContent = `
-            <div style="display:flex!important"><b>About</b></div>
-            <header class="fhs-app-header">Header Content</header>
-            <div class="fhs-app-notification">Notification Content</div>
-            <footer class="fhs-app-bottom-bar">Bottom Bar Content</footer>
+        // Combined HTML content for all components
+        const combinedContent = `
+            <header class="fhs-app-header" style="background-color: #333; color: #fff; padding: 100px;">
+                <h1>Header Content</h1>
+            </header>
+            <div class="fhs-app-notification" style="background-color: #ff0; color: #000; padding: 100px;">
+                Notification Content
+            </div>
+            <footer class="fhs-app-bottom-bar" style="background-color: #333; color: #fff; padding: 100px;">
+                Bottom Bar Content
+            </footer>
         `;
-        document.querySelector('.blogCont').insertAdjacentHTML('beforeend', FhsAppComponentsContent);
+        // Insert combined content into the DOM
+        document.querySelector('.blogMn).insertAdjacentHTML('beforeend', combinedContent);
     }
 }
 
 // Check FHS-app mode on load
 FhsAppComponents();
+
 
 
 // adding translate except settings

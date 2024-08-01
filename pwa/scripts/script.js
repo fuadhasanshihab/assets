@@ -60,9 +60,7 @@ function FhsAppBottomBar() {
 // Function to handle FHS app components
 function FhsAppComponents() {
     if (window.matchMedia('(display-mode: browser)').matches) {
-        addFhsAppCSS();
-        addFhsAppJS();
-        FhsAppHeader();
+        
         FhsAppNotification();
         FhsAppBottomBar();
     }

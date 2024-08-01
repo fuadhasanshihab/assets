@@ -33,10 +33,10 @@ function checkFhsAppMode() {
     });
 
     // Uncomment the following lines when needed in the future
-    const fhsAppContentt = `
-    <div style="height:100vh!important;background:red;">dhejududududjdhdhhdufjfjfjf</div>
-    `;
-    document.querySelector('.post-body').insertAdjacentHTML('afterbegin', fhsAppContentt);
+    //const fhsAppContentt = `
+    //<div style="height:100vh!important;background:red;">dhejududududjdhdhhdufjfjfjf</div>
+    //`;
+    //document.querySelector('.post-body').insertAdjacentHTML('afterbegin', fhsAppContentt);
 
   }
 }

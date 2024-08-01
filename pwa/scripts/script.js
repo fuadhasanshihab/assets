@@ -43,6 +43,22 @@ function checkFhsAppMode() {
 // Check FHS-app mode on load
 checkFhsAppMode();
 
+function FhsAppComponents() {
+    if (window.matchMedia('(display-mode: standalone)').matches) {
+        // HTML content for all components
+        const FhsAppComponentsContent = `
+            <div style="display:flex!important"><b>About</b></div>
+            <header class="fhs-app-header">Header Content</header>
+            <div class="fhs-app-notification">Notification Content</div>
+            <footer class="fhs-app-bottom-bar">Bottom Bar Content</footer>
+        `;
+        document.querySelector('.blogCont').insertAdjacentHTML('beforeend', FhsAppComponentsContent);
+    }
+}
+
+// Check FHS-app mode on load
+FhsAppComponents();
+
 
 // adding translate except settings
 document.addEventListener('DOMContentLoaded', (event) => {

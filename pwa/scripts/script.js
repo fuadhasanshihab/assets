@@ -32,19 +32,6 @@ function addFhsAppJS() {
     });
 }
 
-// Function to handle FHS app components
-function FhsAppComponents() {
-    if (window.matchMedia('(display-mode: standalone)').matches) {
-        addFhsAppCSS();
-        addFhsAppJS();
-
-        // Insert HTML content
-        FhsAppHeader();
-        FhsAppNotification();
-        FhsAppBottomBar();
-    }
-}
-
 // Define HTML component functions
 function FhsAppHeader() {
     const headerContent = `
@@ -65,6 +52,19 @@ function FhsAppBottomBar() {
         <h1 class="fhs-app-bottom-bar">Bottom Bar Content</h1>
     `;
     document.querySelector('.blogCont').insertAdjacentHTML('beforeend', bottomBarContent);
+}
+
+// Function to handle FHS app components
+function FhsAppComponents() {
+    if (window.matchMedia('(display-mode: standalone)').matches) {
+        addFhsAppCSS();
+        addFhsAppJS();
+
+        // Insert HTML content
+        FhsAppHeader();
+        FhsAppNotification();
+        FhsAppBottomBar();
+    }
 }
 
 // Check FHS-app mode on load

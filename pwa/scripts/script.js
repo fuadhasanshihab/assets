@@ -40,31 +40,6 @@ function checkFhsAppMode() {
 // Check FHS-app mode on load
 checkFhsAppMode();
 
-document.addEventListener('DOMContentLoaded', (event) => {
-
-    function FhsAppComponents() {
-        if (window.matchMedia('(display-mode: standalone)').matches) {
-            // HTML content for all components
-            const FhsAppComponentsContent = `
-                <div style="display:flex!important"><b>About</b></div>
-                <header class="fhs-app-header">Header Content</header>
-                <div class="fhs-app-notification">Notification Content</div>
-                <footer class="fhs-app-bottom-bar">Bottom Bar Content</footer>
-            `;
-            
-            const blogCont = document.querySelector('.blogCont');
-            if (blogCont) {
-                blogCont.insertAdjacentHTML('beforeend', FhsAppComponentsContent);
-            } else {
-                console.warn('Element with class "blogCont" not found.');
-            }
-        }
-    }
-
-    // Check FHS-app mode on load
-    FhsAppComponents();
-});
-
 
 
 

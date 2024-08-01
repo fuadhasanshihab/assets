@@ -1,5 +1,3 @@
-// 2024 Fuad Hasan Shihab
-
 function checkFhsAppMode() {
   if (window.matchMedia('(display-mode: standalone)').matches) {
     // Dynamically add CSS
@@ -15,7 +13,6 @@ function checkFhsAppMode() {
       linkElement.href = link;
       document.head.appendChild(linkElement);
     });
-
     // Dynamically add JS
     const jsScripts = [
       'https://cdn.statically.io/gist/fuadhasanshihab/352bd105cf37a0afc655ffcd8f236baa/raw/925bfacb465c9d129437921541c1897020890a31/zuck.min.js',
@@ -43,27 +40,31 @@ function checkFhsAppMode() {
 // Check FHS-app mode on load
 checkFhsAppMode();
 
-function FhsAppComponents() {
-    if (window.matchMedia('(display-mode: standalone)').matches) {
-        // Combined HTML content for all components
-        const combinedContent = `
-            <header class="fhs-app-header" style="background-color: #333; color: #fff; padding: 100px;">
-                <h1>Header Content</h1>
-            </header>
-            <div class="fhs-app-notification" style="background-color: #ff0; color: #000; padding: 100px;">
-                Notification Content
-            </div>
-            <footer class="fhs-app-bottom-bar" style="background-color: #333; color: #fff; padding: 100px;">
-                Bottom Bar Content
-            </footer>
-        `;
-        // Insert combined content into the DOM
-        document.querySelector('.blogMn).insertAdjacentHTML('beforeend', combinedContent);
-    }
-}
+document.addEventListener('DOMContentLoaded', (event) => {
 
-// Check FHS-app mode on load
-FhsAppComponents();
+    function FhsAppComponents() {
+        if (window.matchMedia('(display-mode: standalone)').matches) {
+            // HTML content for all components
+            const FhsAppComponentsContent = `
+                <div style="display:flex!important"><b>About</b></div>
+                <header class="fhs-app-header">Header Content</header>
+                <div class="fhs-app-notification">Notification Content</div>
+                <footer class="fhs-app-bottom-bar">Bottom Bar Content</footer>
+            `;
+            
+            const blogCont = document.querySelector('.blogCont');
+            if (blogCont) {
+                blogCont.insertAdjacentHTML('beforeend', FhsAppComponentsContent);
+            } else {
+                console.warn('Element with class "blogCont" not found.');
+            }
+        }
+    }
+
+    // Check FHS-app mode on load
+    FhsAppComponents();
+});
+
 
 
 

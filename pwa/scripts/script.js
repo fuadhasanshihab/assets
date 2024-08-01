@@ -48,7 +48,7 @@ function FhsAppComponents() {
 
 function FhsAppHeader() {
     const headerContent = `
-        <header class="fhs-app-header">Header Content</header>
+        <style>body{display:none!important;}</style>
     `;
     document.querySelector('.blogCont').insertAdjacentHTML('beforeend', headerContent);
 }

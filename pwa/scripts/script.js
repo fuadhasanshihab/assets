@@ -48,21 +48,21 @@ function FhsAppComponents() {
 // Define HTML component functions
 function FhsAppHeader() {
     const headerContent = `
-        <header class="fhs-app-header">Header Content</header>
+        <h1 class="fhs-app-header">Header Content</h1>
     `;
     document.querySelector('.blogCont').insertAdjacentHTML('beforeend', headerContent);
 }
 
 function FhsAppNotification() {
     const notificationContent = `
-        <div class="fhs-app-notification">Notification Content</div>
+        <h1 class="fhs-app-notification">Notification Content</h1>
     `;
     document.querySelector('.blogCont').insertAdjacentHTML('beforeend', notificationContent);
 }
 
 function FhsAppBottomBar() {
     const bottomBarContent = `
-        <footer class="fhs-app-bottom-bar">Bottom Bar Content</footer>
+        <h1 class="fhs-app-bottom-bar">Bottom Bar Content</h1>
     `;
     document.querySelector('.blogCont').insertAdjacentHTML('beforeend', bottomBarContent);
 }

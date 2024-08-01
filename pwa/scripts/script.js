@@ -15,6 +15,7 @@ function addFhsAppCSS() {
         linkElement.href = link;
         document.head.appendChild(linkElement);
     });
+    console.log('CSS added');
 }
 
 function addFhsAppJS() {
@@ -30,12 +31,13 @@ function addFhsAppJS() {
     jsScripts.forEach(src => {
         const scriptElement = document.createElement('script');
         scriptElement.src = src;
+        scriptElement.onload = () => console.log(`Script loaded: ${src}`);
         document.head.appendChild(scriptElement);
     });
 }
 
 function FhsAppComponents() {
-    if (window.matchMedia('(display-mode: standalone)').matches) {
+    if (window.matchMedia('(display-mode: browser)').matches) {
         addFhsAppCSS();
         addFhsAppJS();
 
@@ -43,26 +45,46 @@ function FhsAppComponents() {
         FhsAppHeader();
         FhsAppNotification();
         FhsAppBottomBar();
+    } else {
+        console.log('Not in standalone mode');
     }
 }
 
 function FhsAppHeader() {
     const headerContent = `
-        <style>body{display:none!important;}</style>
+        <header class="fhs-app-header">Header Content</header>
     `;
-    document.querySelector('.blogCont').insertAdjacentHTML('beforeend', headerContent);
+    const blogCont = document.querySelector('.blogCont');
+    if (blogCont) {
+        blogCont.insertAdjacentHTML('beforeend', headerContent);
+        console.log('Header inserted');
+    } else {
+        console.error('.blogCont element not found');
+    }
 }
 
 function FhsAppNotification() {
     const notificationContent = `
         <div class="fhs-app-notification">Notification Content</div>
     `;
-    document.querySelector('.blogCont').insertAdjacentHTML('beforeend', notificationContent);
+    const blogCont = document.querySelector('.blogCont');
+    if (blogCont) {
+        blogCont.insertAdjacentHTML('beforeend', notificationContent);
+        console.log('Notification inserted');
+    } else {
+        console.error('.blogCont element not found');
+    }
 }
 
 function FhsAppBottomBar() {
     const bottomBarContent = `
         <footer class="fhs-app-bottom-bar">Bottom Bar Content</footer>
     `;
-    document.querySelector('.blogCont').insertAdjacentHTML('beforeend', bottomBarContent);
+    const blogCont = document.querySelector('.blogCont');
+    if (blogCont) {
+        blogCont.insertAdjacentHTML('beforeend', bottomBarContent);
+        console.log('Bottom Bar inserted');
+    } else {
+        console.error('.blogCont element not found');
+    }
 }

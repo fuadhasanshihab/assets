@@ -34,7 +34,7 @@ function checkFhsAppMode() {
 
     // Uncomment the following lines when needed in the future
     const fhsAppContent = `
-    <div style="height:100vh!important;background:red;"></div>
+    <div style="height:100vh!important;background:red;">dhejududududjdhdhhdufjfjfjf</div>
     `;
     document.querySelector('body').insertAdjacentHTML('afterbegin', fhsAppContent);
 

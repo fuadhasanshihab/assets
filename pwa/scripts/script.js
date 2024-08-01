@@ -1,7 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
-    FhsAppComponents();
-});
-
+// Function to dynamically add CSS
 function addFhsAppCSS() {
     const cssLinks = [
         'https://cdn.statically.io/gist/fuadhasanshihab/352bd105cf37a0afc655ffcd8f236baa/raw/925bfacb465c9d129437921541c1897020890a31/fhs.app.style.css',
@@ -17,6 +14,7 @@ function addFhsAppCSS() {
     });
 }
 
+// Function to dynamically add JS
 function addFhsAppJS() {
     const jsScripts = [
         'https://cdn.statically.io/gist/fuadhasanshihab/352bd105cf37a0afc655ffcd8f236baa/raw/925bfacb465c9d129437921541c1897020890a31/zuck.min.js',
@@ -34,8 +32,9 @@ function addFhsAppJS() {
     });
 }
 
+// Function to handle FHS app components
 function FhsAppComponents() {
-    if (window.matchMedia('(display-mode: standalone)').matches) {
+    if (window.matchMedia('(display-mode: browser)').matches) {
         addFhsAppCSS();
         addFhsAppJS();
 
@@ -46,32 +45,27 @@ function FhsAppComponents() {
     }
 }
 
+// Define HTML component functions
 function FhsAppHeader() {
     const headerContent = `
-        <header class="fhs-app-header">Header Content</header>
+        <div class="fhs-app-heaxbhdder">Header Conthdudhdbdhdjdhzhhdhdueuhdjdjdhdjeidhdbjdjdhdjdidhdbjdjdiehdbduidhdueidndjdiidbeidndidbdidbdjdidbidbdidbdidbdisjsjjsjsnsjsjsjsjjsjsisiejjwjsjsjsent</div>
     `;
-    const blogCont = document.querySelector('.blogCont');
-    if (blogCont) {
-        blogCont.insertAdjacentHTML('beforeend', headerContent);
-    }
+    document.querySelector('.blogCont').insertAdjacentHTML('beforeend', headerContent);
 }
 
 function FhsAppNotification() {
     const notificationContent = `
-        <div class="fhs-app-notification">Notification Content</div>
+        <div style="height:59vh!important;" class="fhs-app-nfjjfotification">Notification Content</div>
     `;
-    const blogCont = document.querySelector('.blogCont');
-    if (blogCont) {
-        blogCont.insertAdjacentHTML('beforeend', notificationContent);
-    }
+    document.querySelector('body').insertAdjacentHTML('beforeend', notificationContent);
 }
 
 function FhsAppBottomBar() {
     const bottomBarContent = `
-        <footer class="fhs-app-bottom-bar">Bottom Bar Content</footer>
+        <h1 class="fhs-app-bottom-bajdjdjr">Bottom Bafhjdjdjdjdjdhjdjdjdjjdjdjdhr Content</h1>
     `;
-    const blogCont = document.querySelector('.blogCont');
-    if (blogCont) {
-        blogCont.insertAdjacentHTML('beforeend', bottomBarContent);
-    }
+    document.querySelector('.blogCont').insertAdjacentHTML('beforeend', bottomBarContent);
 }
+
+// Check FHS-app mode on load
+FhsAppComponents();

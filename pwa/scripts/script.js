@@ -15,7 +15,6 @@ function checkFhsAppMode() {
          linkElement.href = link;
          document.head.appendChild(linkElement);
       });
-
       // Dynamically add JS
       const jsScripts = [
          'https://fuadhasanshihab.github.io/assets/pwa/scripts/components.js',
@@ -46,12 +45,9 @@ checkFhsAppMode();
 
 // adding translate except settings
 document.addEventListener('DOMContentLoaded', (event) => {
-   // Define the URL of the page where the script should be blocked
-   const blockedPageUrl = '/p/app-settings.html'; // Change this to the path of your specific page
-
-   // Check if the current page is the one where the script should be blocked
+   const blockedPageUrl = '/p/app-settings.html';
    if (window.location.pathname === blockedPageUrl) {
-      return; // Exit the script early to prevent it from executing
+      return; // Exit the script early
    }
 
    function insertFhsAppContent() {
@@ -72,21 +68,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
          }
       }
    }
-   // Insert FHS app content on load
-   insertFhsAppContent();
+   insertFhsAppContent(); // Insert FHS app content on load
 });
 
 
 // preloader when link ckicked
-// Check if in standalone mode ( added to home screen)
 if (window.matchMedia('(display-mode: standalone)').matches) {
    // Function to show the preloader with fade-in animation
    function fhsAppShowPreloader() {
       var preloader = document.querySelector('.fhs-app-preloader');
-      preloader.style.display = 'flex'; // display as flex container
+      preloader.style.display = 'flex';
       setTimeout(function () {
-         preloader.classList.add('show'); // add 'show' class to apply opacity transition
-      }, 10); // small delay to ensure transition is applied correctly
+         preloader.classList.add('show');
+      }, 10); // small delay to ensure transition
 
       // Automatically hide preloader after 10 seconds
       setTimeout(function () {
@@ -97,7 +91,7 @@ if (window.matchMedia('(display-mode: standalone)').matches) {
    // Function to hide the preloader with fade-out animation
    function fhsAppHidePreloader() {
       var preloader = document.querySelector('.fhs-app-preloader');
-      preloader.classList.remove('show'); // remove 'show' class to trigger opacity transition
+      preloader.classList.remove('show');
       setTimeout(function () {
          preloader.style.display = 'none';
       }, 300); // wait for transition to complete before hiding
@@ -109,7 +103,6 @@ if (window.matchMedia('(display-mode: standalone)').matches) {
 
       // Check if the clicked element is an <a> tag
       if (target.tagName.toLowerCase() === 'a') {
-         // Show the preloader immediately
          fhsAppShowPreloader();
       }
    });

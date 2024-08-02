@@ -10,10 +10,14 @@
         li { margin: 5px 0; }
         a { text-decoration: none; color: #0366d6; }
         a:hover { text-decoration: underline; }
+        .breadcrumb { margin-bottom: 20px; }
+        .breadcrumb a { text-decoration: none; color: #0366d6; }
+        .breadcrumb a:hover { text-decoration: underline; }
     </style>
 </head>
 <body>
     <h1>Directory Listing</h1>
+    <div class="breadcrumb" id="breadcrumb"></div>
     <ul id="file-list"></ul>
 
     <script>
@@ -30,9 +34,24 @@
             const fileList = document.getElementById('file-list');
             fileList.innerHTML = '';
 
+            // Update breadcrumb
+            const breadcrumb = document.getElementById('breadcrumb');
+            breadcrumb.innerHTML = '';
+            const paths = path.split('/').filter(Boolean);
+            let accumulatedPath = '';
+            
+            if (paths.length > 0) {
+                accumulatedPath = '/';
+                breadcrumb.innerHTML += `<a href="#" onclick="navigateTo('')">Root</a> / `;
+                paths.forEach((dir, index) => {
+                    accumulatedPath += `${dir}/`;
+                    breadcrumb.innerHTML += `<a href="#" onclick="navigateTo('${accumulatedPath}')">${dir}</a> / `;
+                });
+            }
+
             if (path) {
                 const backButton = document.createElement('li');
-                backButton.innerHTML = `<a href="#" onclick="navigateTo('')">Back to root</a>`;
+                backButton.innerHTML = `<a href="#" onclick="navigateTo('${paths.slice(0, -1).join('/')}/')">Back</a>`;
                 fileList.appendChild(backButton);
             }
 

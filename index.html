@@ -20,6 +20,7 @@
         const repo = 'assets'; // Your repository name
         const owner = 'fuadhasanshihab'; // Your GitHub username
         const branch = 'main'; // Your branch name
+        let currentPath = ''; // To keep track of the current directory
 
         async function fetchFiles(path = '') {
             const url = `https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${branch}`;
@@ -27,10 +28,18 @@
             const data = await response.json();
 
             const fileList = document.getElementById('file-list');
+            fileList.innerHTML = '';
+
+            if (path) {
+                const backButton = document.createElement('li');
+                backButton.innerHTML = `<a href="#" onclick="navigateTo('')">Back to root</a>`;
+                fileList.appendChild(backButton);
+            }
+
             data.forEach(file => {
                 const listItem = document.createElement('li');
                 if (file.type === 'dir') {
-                    listItem.innerHTML = `<a href="${file.path}/">${file.name}/</a>`;
+                    listItem.innerHTML = `<a href="#" onclick="navigateTo('${file.path}')">${file.name}/</a>`;
                 } else {
                     listItem.innerHTML = `<a href="${file.path}">${file.name}</a>`;
                 }
@@ -38,6 +47,12 @@
             });
         }
 
+        function navigateTo(path) {
+            currentPath = path;
+            fetchFiles(path);
+        }
+
+        // Initial load
         fetchFiles();
     </script>
 </body>

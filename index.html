@@ -10,14 +10,11 @@
         li { margin: 5px 0; }
         a { text-decoration: none; color: #0366d6; }
         a:hover { text-decoration: underline; }
-        .breadcrumb { margin-bottom: 20px; }
-        .breadcrumb a { text-decoration: none; color: #0366d6; }
-        .breadcrumb a:hover { text-decoration: underline; }
+        .nested { margin-left: 20px; display: none; }
     </style>
 </head>
 <body>
-    <h1>Directory Listing</h1>
-    <div class="breadcrumb" id="breadcrumb"></div>
+    <h1>Directory Listing1</h1>
     <ul id="file-list"></ul>
 
     <script>
@@ -34,41 +31,34 @@
             const fileList = document.getElementById('file-list');
             fileList.innerHTML = '';
 
-            // Update breadcrumb
-            const breadcrumb = document.getElementById('breadcrumb');
-            breadcrumb.innerHTML = '';
-            const paths = path.split('/').filter(Boolean);
-            let accumulatedPath = '';
-            
-            if (paths.length > 0) {
-                accumulatedPath = '/';
-                breadcrumb.innerHTML += `<a href="#" onclick="navigateTo('')">Root</a> / `;
-                paths.forEach((dir, index) => {
-                    accumulatedPath += `${dir}/`;
-                    breadcrumb.innerHTML += `<a href="#" onclick="navigateTo('${accumulatedPath}')">${dir}</a> / `;
-                });
-            }
-
             if (path) {
                 const backButton = document.createElement('li');
-                backButton.innerHTML = `<a href="#" onclick="navigateTo('${paths.slice(0, -1).join('/')}/')">Back</a>`;
+                backButton.innerHTML = `<a href="#" onclick="navigateTo('')">Back to root</a>`;
                 fileList.appendChild(backButton);
             }
 
             data.forEach(file => {
                 const listItem = document.createElement('li');
                 if (file.type === 'dir') {
-                    listItem.innerHTML = `<a href="#" onclick="navigateTo('${file.path}')">${file.name}/</a>`;
+                    listItem.innerHTML = `<a href="#" onclick="toggleDirectory('${file.path}')">${file.name}/</a>`;
+                    const nestedList = document.createElement('ul');
+                    nestedList.className = 'nested';
+                    listItem.appendChild(nestedList);
                 } else {
-                    listItem.innerHTML = `<a href="${file.path}">${file.name}</a>`;
+                    listItem.innerHTML = `<a href="${file.path}" target="_blank">${file.name}</a>`;
                 }
                 fileList.appendChild(listItem);
             });
         }
 
-        function navigateTo(path) {
-            currentPath = path;
-            fetchFiles(path);
+        function toggleDirectory(path) {
+            const nestedList = Array.from(document.querySelectorAll(`a[href='#'][onclick="toggleDirectory('${path}')"]`))[0].parentElement.querySelector('.nested');
+            if (nestedList.style.display === 'none') {
+                nestedList.style.display = 'block';
+                fetchFiles(path);
+            } else {
+                nestedList.style.display = 'none';
+            }
         }
 
         // Initial load

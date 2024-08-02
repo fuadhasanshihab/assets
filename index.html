@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directory Listing</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        ul { list-style-type: none; padding: 0; }
+        li { margin: 5px 0; }
+        a { text-decoration: none; color: #0366d6; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>Directory Listing</h1>
+    <ul id="file-list"></ul>
+
+    <script>
+        const repo = 'assets'; // Your repository name
+        const owner = 'fuadhasanshihab'; // Your GitHub username
+        const branch = 'main'; // Your branch name
+
+        async function fetchFiles(path = '') {
+            const url = `https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${branch}`;
+            const response = await fetch(url);
+            const data = await response.json();
+
+            const fileList = document.getElementById('file-list');
+            data.forEach(file => {
+                const listItem = document.createElement('li');
+                if (file.type === 'dir') {
+                    listItem.innerHTML = `<a href="${file.path}/">${file.name}/</a>`;
+                } else {
+                    listItem.innerHTML = `<a href="${file.path}">${file.name}</a>`;
+                }
+                fileList.appendChild(listItem);
+            });
+        }
+
+        fetchFiles();
+    </script>
+</body>
+</html>

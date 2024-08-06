@@ -1,11 +1,10 @@
 @font-face {
-    font-family: 'ShihabRoughHandwritingEnglish-Regular';
-    src: url('ShihabRoughHandwritingEnglish/ShihabRoughHandwritingEnglish-Regular.woff2') format('woff2'),
-         url('ShihabRoughHandwritingEnglish/ShihabRoughHandwritingEnglish-Regular.woff') format('woff');
-}
-@font-face {
     font-family: 'ShihabRoughHandwriting-Regular';
     src: url('ShihabRoughHandwriting/ShihabRoughHandwriting-Regular.woff2') format('woff2'),
          url('ShihabRoughHandwriting/ShihabRoughHandwriting-Regular.woff') format('woff');
 }
-
+@font-face {
+    font-family: 'ShihabRoughHandwritingEnglish-Regular';
+    src: url('ShihabRoughHandwritingEnglish/ShihabRoughHandwritingEnglish-Regular.woff2') format('woff2'),
+         url('ShihabRoughHandwritingEnglish/ShihabRoughHandwritingEnglish-Regular.woff') format('woff');
+}

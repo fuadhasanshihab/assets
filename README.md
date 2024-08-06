@@ -4,4 +4,4 @@
 [![Behance](https://img.shields.io/badge/-Behance-1769FF?logo=behance&logoColor=white&style=for-the-badge)](https://www.behance.net/fuadhasanshihab)
 [![Pinterest](https://img.shields.io/badge/-Pinterest-E60023?logo=pinterest&logoColor=white&style=for-the-badge)](https://www.pinterest.com/fuadhasan_shihab/)
 [![CodePen](https://img.shields.io/badge/-CodePen-000000?logo=codepen&logoColor=white&style=for-the-badge)](https://codepen.io/fuadhasanshihab)
-[![Website](https://img.shields.io/badge/-Website-0000FF?style=for-the-badge)](https://fuadhasanshihab.com/)
+[![Website](https://img.shields.io/badge/-Website-0000FF?style=for-the-badge)](https://fuadhasanshihab.blogspot.com/)

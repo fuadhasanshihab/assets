@@ -1,1 +1,5 @@
-
+@font-face {
+    font-family: 'ShihabRoughHandwritingEnglish-Regular';
+    src: url('ShihabRoughHandwritingEnglish-Regular.woff2') format('woff2'),
+         url('ShihabRoughHandwritingEnglish-Regular.woff') format('woff');
+}

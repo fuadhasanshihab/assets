@@ -1,17 +1,7 @@
-<div align="left">
-<a href="https://www.facebook.com/fuadhasanshihabyt/">
-    <img src="https://gist.githubusercontent.com/cxmeel/0dbc95191f239b631c3874f4ccf114e2/raw/bb4634715f95ebb209b4e0bcdd4d2d98fe64c64c/facebook-icon.svg" alt="icon" height="32">
-</a>
-<a href="https://www.instagram.com/fuadhasan_shihab/">
-    <img src="https://gist.githubusercontent.com/cxmeel/0dbc95191f239b631c3874f4ccf114e2/raw/bb4634715f95ebb209b4e0bcdd4d2d98fe64c64c/instagram-icon.svg" alt="icon" height="32">
-</a>
-<a href="https://youtube.com/channel/UCVXhsiFQQAd727b5SwbbouA">
-    <img src="https://gist.githubusercontent.com/cxmeel/0dbc95191f239b631c3874f4ccf114e2/raw/bb4634715f95ebb209b4e0bcdd4d2d98fe64c64c/youtube-icon.svg" alt="icon" width="32">
-</a>
-<a href="https://www.behance.net/fuadhasanshihab">
-    <img src="https://gist.githubusercontent.com/cxmeel/0dbc95191f239b631c3874f4ccf114e2/raw/bb4634715f95ebb209b4e0bcdd4d2d98fe64c64c/behance-icon.svg" alt="icon" width="32">
-</a>
-<a href="https://www.pinterest.com/fuadhasan_shihab/">
-    <img src="https://cdn.icon-icons.com/icons2/555/PNG/512/pinterest_icon-icons.com_53605.png" alt="icon" width="32">
-</a>
-</div>
+[![Facebook](https://img.shields.io/badge/-Facebook-blue?logo=facebook&logoColor=white&style=for-the-badge)](https://www.facebook.com/fuadhasanshihabyt/)
+[![Instagram](https://img.shields.io/badge/-Instagram-E4405F?logo=instagram&logoColor=white&style=for-the-badge)](https://www.instagram.com/fuadhasan_shihab/)
+[![YouTube](https://img.shields.io/badge/-YouTube-FF0000?logo=youtube&logoColor=white&style=for-the-badge)](https://youtube.com/channel/UCVXhsiFQQAd727b5SwbbouA)
+[![Behance](https://img.shields.io/badge/-Behance-1769FF?logo=behance&logoColor=white&style=for-the-badge)](https://www.behance.net/fuadhasanshihab)
+[![Pinterest](https://img.shields.io/badge/-Pinterest-E60023?logo=pinterest&logoColor=white&style=for-the-badge)](https://www.pinterest.com/fuadhasan_shihab/)
+[![CodePen](https://img.shields.io/badge/-CodePen-000000?logo=codepen&logoColor=white&style=for-the-badge)](https://codepen.io/fuadhasanshihab)
+[![Website](https://img.shields.io/badge/-Website-0000FF?style=for-the-badge)](https://fuadhasanshihab.com/)

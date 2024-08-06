@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assets - Fuad Hasan Shihab</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Titillium Web', sans-serif;
+            background-color: #fff;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .hidden {
+            display:none!important;
+        }
+        .fhs-container {
+            max-width: 1200px;
+            width: 90%;
+            padding: 5% 0!important;
+            box-sizing: border-box;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .fhs-title {
+            font-size: 38px!important;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #004d40;
+            line-height:1;
+        }
+        .fhs-breadcrumb {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            color: #333;
+            font-size: 16px;
+            font-weight: 400;
+        }
+        .fhs-breadcrumb a {
+            color: #007bff;
+            text-decoration: none;
+            margin: 0 5px; /* Adjusted margin for tighter spacing */
+            transition: color 0.3s ease;
+        }
+        .fhs-breadcrumb a:hover {
+            text-decoration: underline;
+            color: #0056b3;
+        }
+        .fhs-breadcrumb .fhs-separator {
+            color: #6c757d;
+            margin: 0 5px; /* Adjusted margin for tighter spacing */
+        }
+        .fhs-button {
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            padding: 12px 24px;
+            margin-bottom: 20px;
+            display: block;
+            text-align: center;
+            transition: background-color 0.3s ease;
+            outline: none;
+        }
+        .fhs-button:hover {
+            background-color: #0056b3;
+        }
+        .fhs-file-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .fhs-file-list li {
+            display: flex;
+            align-items: center;
+            margin: 15px 0;
+            padding: 15px;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        .fhs-file-list li:hover {
+            background-color: #e9f5ff;
+        }
+        .fhs-material-icons {
+            margin-right: 15px;
+            font-size: 24px;
+            color: #007bff;
+            font-family: 'Material Icons';
+        }
+        .fhs-file-list a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            flex: 1;
+        }
+        .fhs-file-list a:hover {
+            text-decoration: underline;
+        }
+        .fhs-file-info {
+            font-size: 14px;
+            color: #6c757d;
+            margin-left: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .fhs-file-size {
+            margin-right: 10px;
+        }
+        .fhs-file-type {
+            font-size: 14px;
+            color: #6c757d;
+        }
+
+        /* Footer styling */
+        .fhs-footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #6c757d;
+            text-align: center;
+        }
+
+        /* Credit styling */
+        .fhs-credit {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #333;
+            padding: 15px;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            text-align: center;
+        }
+        .fhs-credit a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .fhs-credit a:hover {
+            text-decoration: underline;
+        }
+
+        /* Dark Mode Styles */
+        body.dark-mode {
+            background-color: #010409;
+            color: #fff;
+        }
+
+        body.dark-mode .fhs-breadcrumb,
+        body.dark-mode .fhs-file-list li,
+        body.dark-mode .fhs-credit,
+        body.dark-mode .fhs-dark-mode-toggle {
+            background-color: #0d1017;
+            border-color: #1f242a;
+            color: #fff;
+        }
+
+        body.dark-mode .fhs-breadcrumb a,
+        body.dark-mode .fhs-file-list a {
+            color: #1e90ff!important;
+        }
+
+        body.dark-mode .fhs-breadcrumb .fhs-separator,
+        body.dark-mode .fhs-file-info,
+        body.dark-mode .fhs-file-size,
+        body.dark-mode .fhs-file-type,
+        body.dark-mode .fhs-footer,
+        body.dark-mode .fhs-credit,
+        body.dark-mode .fhs-title{
+            color: #fff;
+        }
+
+        body.dark-mode .fhs-file-list li:hover {
+            background-color: #21262c;
+        }
+
+        .fhs-dark-mode-toggle {
+            margin-bottom: 20px;
+            padding: 8px;
+            background: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 14px;
+            color: #333;
+        }
+        .fhs-dark-mode-toggle label {
+            cursor: pointer;
+        }
+        .fhs-dark-mode-toggle input {
+            margin-right: 10px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .fhs-title {
+                font-size: 24px;
+            }
+            .fhs-container {
+                padding: 20px;
+            }
+            .fhs-button {
+                font-size: 14px;
+                padding: 10px 20px;
+            }
+            .fhs-breadcrumb {
+                font-size: 14px;
+            }
+            .fhs-file-list li {
+                padding: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="fhs-container">
+        <div class="hidden fhs-title">Github Directory<br/>Listing</div>
+        <div class="fhs-breadcrumb" id="fhs-breadcrumb"></div>
+        <button id="fhs-back-to-root" class="fhs-button" style="display: none;" onclick="fhsNavigateTo('')">Back to root</button>
+        <ul id="fhs-file-list" class="fhs-file-list"></ul>
+        <p id="fhs-footer" class="hidden fhs-footer"></p>
+        <!-- Dark mode toggle switch -->
+        <div class="fhs-dark-mode-toggle">
+            <label>
+                <input type="checkbox" id="dark-mode-toggle">                
+                Dark Mode
+            </label>
+        </div>
+        <div class="fhs-credit">
+            Copyright <a href="https://github.com/fuadhasanshihab/" target="_blank">Fuad Hasan Shihab</a><br>
+            <!-- View on <a href="https://github.com/fuadhasanshihab/github-directory-listing" target="_blank">GitHub</a> -->
+        </div>
+    </div>
+    <script>
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+
+        // Load dark mode preference from localStorage
+        if (localStorage.getItem('darkMode') === 'true') {
+            document.body.classList.add('dark-mode');
+            darkModeToggle.checked = true;
+        }
+
+        darkModeToggle.addEventListener('change', () => {
+            if (darkModeToggle.checked) {
+                document.body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'true');
+            } else {
+                document.body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', 'false');
+            }
+        });
+
+        const fhsRepo = 'assets'; // Your repo name
+        const fhsOwner = 'fuadhasanshihab'; // Your GitHub username
+        const fhsBranch = 'main'; // Your branch name
+        let fhsCurrentPath = '';
+
+        async function fhsFetchFiles(path = '') {
+            try {
+                const url = `https://api.github.com/repos/${fhsOwner}/${fhsRepo}/contents/${path}?ref=${fhsBranch}`;
+                const response = await fetch(url);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                
+                const fhsData = await response.json();
+                
+                if (!Array.isArray(fhsData)) {
+                    throw new Error('Unexpected response format');
+                }
+
+                const fhsFileList = document.getElementById('fhs-file-list');
+                const fhsBreadcrumb = document.getElementById('fhs-breadcrumb');
+                const fhsBackToRootButton = document.getElementById('fhs-back-to-root');
+                const fhsFooter = document.getElementById('fhs-footer');
+
+                fhsFileList.innerHTML = '';
+                fhsBreadcrumb.innerHTML = '';
+                
+                // Show the "Back to root" button when not at the root
+                fhsBackToRootButton.style.display = path ? 'block' : 'none';
+
+                if (path) {
+                    const pathParts = path.split('/').filter(part => part);
+                    let fhsAccumulatedPath = '';
+
+                    // Initialize breadcrumb with repository name and current path
+                    fhsBreadcrumb.innerHTML = `<a href="#" onclick="fhsNavigateTo('')">${fhsRepo}</a>`;
+                    fhsAccumulatedPath = '';
+                    pathParts.forEach((part, index) => {
+                        fhsAccumulatedPath += (fhsAccumulatedPath ? '/' : '') + part;
+                        fhsBreadcrumb.innerHTML += ` <span class="fhs-separator">></span> <a href="#" onclick="fhsNavigateTo('${fhsAccumulatedPath}')">${part}</a>`;
+                    });
+                } else {
+                    // Initialize breadcrumb with repository name only
+                    fhsBreadcrumb.innerHTML = `<span>${fhsRepo}</span>`;
+                }
+
+                // Add directory and file links
+                fhsData.forEach(file => {
+                    const fhsListItem = document.createElement('li');
+                    const fhsIcon = file.type === 'dir' ? 'folder' : 'insert_drive_file';
+                    const fhsFileType = file.type === 'dir' ? 'Folder' : (file.name.split('.').pop() || 'Unknown');
+                    const fhsFileSize = file.size ? (file.size / 1024).toFixed(2) + ' KB' : 'N/A';
+                    
+                    if (file.type === 'dir') {
+                        fhsListItem.innerHTML = `<span class="fhs-material-icons">${fhsIcon}</span><a href="#" onclick="fhsNavigateTo('${file.path}')">${file.name}/</a><span class="fhs-file-type">${fhsFileType}</span>`;
+                    } else {
+                        const githubFileUrl = `https://${fhsOwner}.github.io/${fhsRepo}/${file.path}`;
+                        fhsListItem.innerHTML = `<span class="fhs-material-icons">${fhsIcon}</span><a href="${githubFileUrl}" target="_blank">${file.name}</a><span class="fhs-file-info"><span class="fhs-file-size">${fhsFileSize}</span><span class="fhs-file-type">${fhsFileType}</span></span>`;
+                    }
+                    fhsFileList.appendChild(fhsListItem);
+                });
+
+                // Update footer with repository, branch, and current time
+                const fhsCurrentTime = new Date().toLocaleString();
+                fhsFooter.innerHTML = `File fetched from <strong>${fhsRepo}</strong> repository (branch: <strong>${fhsBranch}</strong>) by <strong>${fhsOwner}</strong> from GitHub on <strong>${fhsCurrentTime}</strong>`;
+                
+            } catch (error) {
+                console.error('Error fetching files:', error);
+                document.getElementById('fhs-file-list').innerHTML = '<li>Error loading files.</li>';
+            }
+        }
+
+        function fhsNavigateTo(path) {
+            fhsCurrentPath = path;
+            fhsFetchFiles(path);
+        }
+
+        // Initial load
+        fhsFetchFiles();
+    </script>
+</body>
+</html>

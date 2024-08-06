@@ -1,10 +1,11 @@
 @font-face {
-    font-family: 'ShihabRoughHandwriting-Regular';
-    src: url('https://fuadhasanshihab.github.io/assets/fonts/ShihabRoughHandwriting/ShihabRoughHandwriting-Regular.woff2') format('woff2'),
-         url('https://fuadhasanshihab.github.io/assets/fonts/ShihabRoughHandwriting/ShihabRoughHandwriting-Regular.woff') format('woff');
-}
-@font-face {
     font-family: 'ShihabRoughHandwritingEnglish-Regular';
     src: url('https://fuadhasanshihab.github.io/assets/fonts/ShihabRoughHandwritingEnglish/ShihabRoughHandwritingEnglish-Regular.woff2') format('woff2'),
          url('https://fuadhasanshihab.github.io/assets/fonts/ShihabRoughHandwritingEnglish/ShihabRoughHandwritingEnglish-Regular.woff') format('woff');
 }
+@font-face {
+    font-family: 'ShihabRoughHandwriting-Regular';
+    src: url('https://fuadhasanshihab.github.io/assets/fonts/ShihabRoughHandwriting/ShihabRoughHandwriting-Regular.woff2') format('woff2'),
+         url('https://fuadhasanshihab.github.io/assets/fonts/ShihabRoughHandwriting/ShihabRoughHandwriting-Regular.woff') format('woff');
+}
+

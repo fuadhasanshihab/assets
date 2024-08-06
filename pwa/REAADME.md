@@ -171,9 +171,10 @@ You can build a PWA app using it but you can't do the following since it require
 
 ⭐ Star [this repository](https://github.com/kumardeo/blogger-pwa-cdn) if you find it useful and working method.  
 If you are facing any problem, feel free to open an issue.
--->
+
 
 ## License
 
 The project is licensed under MIT License.
 Credit: @kumardeo
+-->

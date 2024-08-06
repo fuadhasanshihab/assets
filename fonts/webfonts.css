@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Shihab-Rough-Handwriting-Regular';
+    src: url('https://cdn.statically.io/gh/fuadhasanshihab/fonts/main/Shihab-Rough-Handwriting-Regular.woff2') format('woff2'),
+         url('https://cdn.statically.io/gh/fuadhasanshihab/fonts/main/Shihab-Rough-Handwriting-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'Shihab-Rough-Handwriting-English-Regular';
+    src: url('https://cdn.statically.io/gh/fuadhasanshihab/fonts/main/Shihab-Rough-Handwriting-English-Regular.woff2') format('woff2'),
+         url('https://cdn.statically.io/gh/fuadhasanshihab/fonts/main/Shihab-Rough-Handwriting-English-Regular.woff') format('woff');
+}

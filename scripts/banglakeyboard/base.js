@@ -1,4 +1,4 @@
-//  copyright lexilogos.com
+//  copyright
 function alpha(item) {
     var input = document.conversion.saisie;
     if (document.selection) {

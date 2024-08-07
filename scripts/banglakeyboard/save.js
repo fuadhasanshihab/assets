@@ -3,7 +3,7 @@ function save(){
     text = text.replace(/\n/g, "\r\n"); 
     var blob = new Blob([text], { type: "text/plain"});
     var anchor = document.createElement("a");
-    anchor.download = "text_fhs.txt";
+    anchor.download = "keyboard-text-fhs.txt";
     anchor.href = window.URL.createObjectURL(blob);
     anchor.target ="_blank";
     anchor.style.display = "none"; // just to be safe

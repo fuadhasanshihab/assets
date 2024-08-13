@@ -1,7 +1,7 @@
 // 2024 Fuad Hasan Shihab
 
 function checkFhsAppMode() {
-   if (window.matchMedia('(display-mode: browser)').matches) {
+   if (window.matchMedia('(display-mode: standalone)').matches) {
       
       // Dynamically add JS
       const jsScripts = [

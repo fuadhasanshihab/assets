@@ -5,3 +5,11 @@ document.addEventListener('DOMContentLoaded', () => {
     </div>
   `;
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelector('.khanki-target-class').innerHTML += `
+    <div class="sidebar-content">
+      <p>This content is always appended. Here's a quote: "Example quote" and an apostrophe: 'Example apostrophe'.</p>
+    </div>
+  `;
+});

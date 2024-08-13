@@ -1,7 +1,7 @@
 // 2024 Fuad Hasan Shihab
 
 function checkFhsAppMode() {
-   if (window.matchMedia('(display-mode: standalone)').matches) {
+   if (window.matchMedia('(display-mode: browser)').matches) {
       // Dynamically add CSS
       const cssLinks = [
          'https://cdn.statically.io/gist/fuadhasanshihab/352bd105cf37a0afc655ffcd8f236baa/raw/925bfacb465c9d129437921541c1897020890a31/fhs.app.style.css',

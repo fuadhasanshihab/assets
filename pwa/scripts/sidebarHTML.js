@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+
   document.querySelector('.sidebar-target-class').innerHTML += `
 
         <footer class="un-bottom-navigation filter-blur">
@@ -166,4 +166,4 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>   
     
   `;
-});
+

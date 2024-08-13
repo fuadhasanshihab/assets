@@ -261,8 +261,60 @@ document.addEventListener('DOMContentLoaded', () => {
   `;
 
   document.querySelector('.bottom-nav-target-class').innerHTML += `
-    <div class="bottom-nav-content">
-      <p>This content is always appended to the bottom navigation.</p>
-    </div>
+
+<div class='border-b-gradient un-bottom-navigation filter-blur' style='display:none;'>
+            <div class='center em_body_navigation border-0 -active-links border-b-gradient' style='min-height:76px!important;border-radius:40px 40px 0 0!important;box-shadow: 0 0 10px rgba(0,0,0,0.01)'>
+                <div class='item_link'>
+                    <a aria-label='btnNavigation' class='btn btn_navLink visited' href='/p/app-resources.html'>
+                        <div class='icon_current'>
+                            <i class='ri-store-line'/>
+                        </div>
+                        <div class='icon_active'>
+                            <i class='ri-store-fill'/>
+                        </div>
+                    </a>
+                </div>
+                <div class='item_link'>
+                    <a aria-label='btnNavigation' class='btn btn_navLink visited' href='/p/app-tools.html'>
+                        <div class='icon_current'>
+                            <i class='ri-tools-line'/>
+                        </div>
+                        <div class='icon_active'>
+                            <i class='ri-tools-fill'/>
+                        </div>
+                    </a>
+                </div>
+                <div class='item_link'>
+                    <a aria-label='uploadItem' class='btn btn_navLink without_active' href='/p/app.html'>
+                        <div class='btn btnCircle_default'>
+                            
+                          <i class='ri-home-5-fill'/>
+                        </div>
+                    </a>
+                </div>
+                <div class='item_link'>
+                    <a aria-label='btnNavigation' class='btn btn_navLink visited' href='/p/app-tutorial.html'>
+                        <div class='icon_current'>
+                            <i class='ri-movie-line'/>
+                        </div>
+                        <div class='icon_active'>
+                            <i class='ri-movie-fill'/>
+                          
+                        </div>
+                    </a>
+                </div>
+                <div class='item_link'>
+                    <a aria-label='btnNavigation' class='btn btn_navLink visited' href='/p/account.html'>
+                        <div class='icon_current'>
+                            <i class='ri-account-circle-line'/>
+                        </div>
+                        <div class='icon_active'>
+                            <i class='ri-account-circle-fill'/>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>   
+    
   `;
 });

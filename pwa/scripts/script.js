@@ -2,19 +2,7 @@
 
 function checkFhsAppMode() {
    if (window.matchMedia('(display-mode: browser)').matches) {
-      // Dynamically add CSS
-      const cssLinks = [
-         'https://cdn.statically.io/gist/fuadhasanshihab/352bd105cf37a0afc655ffcd8f236baa/raw/925bfacb465c9d129437921541c1897020890a31/fhs.app.style.css',
-         'https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css',
-         'https://unpkg.com/swiper/swiper-bundle.min.css',
-         'https://unpkg.com/zuck.js@latest/dist/zuck.min.css'
-      ];
-      cssLinks.forEach(link => {
-         const linkElement = document.createElement('link');
-         linkElement.rel = 'stylesheet';
-         linkElement.href = link;
-         document.head.appendChild(linkElement);
-      });
+      
       // Dynamically add JS
       const jsScripts = [
          'https://cdn.statically.io/gist/fuadhasanshihab/352bd105cf37a0afc655ffcd8f236baa/raw/925bfacb465c9d129437921541c1897020890a31/zuck.min.js',
@@ -31,6 +19,20 @@ function checkFhsAppMode() {
          document.head.appendChild(scriptElement);
       });
 
+      // Dynamically add CSS
+      const cssLinks = [
+         'https://cdn.statically.io/gist/fuadhasanshihab/352bd105cf37a0afc655ffcd8f236baa/raw/925bfacb465c9d129437921541c1897020890a31/fhs.app.style.css',
+         'https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css',
+         'https://unpkg.com/swiper/swiper-bundle.min.css',
+         'https://unpkg.com/zuck.js@latest/dist/zuck.min.css'
+      ];
+      cssLinks.forEach(link => {
+         const linkElement = document.createElement('link');
+         linkElement.rel = 'stylesheet';
+         linkElement.href = link;
+         document.head.appendChild(linkElement);
+      });
+      
       // Uncomment the following lines when needed in the future
       // const fhsAppContent = `
       // `;

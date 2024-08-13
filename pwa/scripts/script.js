@@ -17,7 +17,6 @@ function checkFhsAppMode() {
       });
       // Dynamically add JS
       const jsScripts = [
-         'https://fuadhasanshihab.github.io/assets/pwa/scripts/sidebarHTML.js',
          'https://cdn.statically.io/gist/fuadhasanshihab/352bd105cf37a0afc655ffcd8f236baa/raw/925bfacb465c9d129437921541c1897020890a31/zuck.min.js',
          'https://cdn.jsdelivr.net/npm/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js',
          'https://unpkg.com/swiper/swiper-bundle.min.js',

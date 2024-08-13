@@ -1,9 +1,7 @@
-if (window.matchMedia('(display-mode: standalone)').matches) {
-  const sidebarElement = document.querySelector('.sidebar-target-class');
-  const sidebarHtmlContent = `
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelector('.sidebar-target-class').innerHTML += `
     <div class="sidebar-content">
-      <p>This content is only visible in standalone mode. Here's a quote: "Example quote" and an apostrophe: 'Example apostrophe'.</p>
+      <p>This content is always appended. Here's a quote: "Example quote" and an apostrophe: 'Example apostrophe'.</p>
     </div>
   `;
-  sidebarElement.innerHTML += sidebarHtmlContent;
-}
+});

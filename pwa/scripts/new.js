@@ -186,6 +186,7 @@ if (window.matchMedia('(display-mode: standalone)').matches) {
             </ul>
          </div>
          <div class='modal-footer'>
+            <div class='isTranss'> <div class='transW'><div class='transP'> <div class='googleTrans' id='_google_translator_element'/> </div></div> </div></div>
             <div class='em_darkMode_menu'>
                <label class='text' for='switchDark'>
                   <h3>Dark Mode</h3>
@@ -199,30 +200,6 @@ if (window.matchMedia('(display-mode: standalone)').matches) {
                <input aria-describedby='switchDark' class='switchDarkMode theme-switch' id='switchDark' onclick='toggleMode()' type='checkbox'/>
                <span class='handle'/>
                </label>
-               <!--script>
-                  //<![CDATA[
-                        function modeL() {
-                            // Your code for enabling light mode
-                            document.body.classList.remove('dark-mode');
-                            document.body.classList.add('light-mode');
-                        }
-                  
-                        function modeD() {
-                            // Your code for enabling dark mode
-                            document.body.classList.remove('light-mode');
-                            document.body.classList.add('dark-mode');
-                        }
-                  
-                        function toggleMode() {
-                            const checkbox = document.getElementById('switchDark');
-                            if (checkbox.checked) {
-                                modeD();
-                            } else {
-                                modeL();
-                            }
-                        }
-                  //]]>
-                    </script-->
             </div>
          </div>
       </div>

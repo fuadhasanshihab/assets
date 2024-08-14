@@ -3,7 +3,7 @@ if (window.matchMedia('(display-mode: standalone)').matches) {
     
     // Add External CSS to Head using innerHTML
     document.querySelector('head').innerHTML += `
-        <link rel="stylesheet" href="https://cdn.statically.io/gist/fuadhasanshihab/352bd105cf37a0afc655ffcd8f236baa/raw/925bfacb465c9d129437921541c1897020890a31/fhs.app.style.css">
+        <link rel="stylesheet" href="https://fuadhasanshihab.github.io/assets/pwa/styles/style.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css">
         <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
         <link rel="stylesheet" href="https://unpkg.com/zuck.js@latest/dist/zuck.min.css">

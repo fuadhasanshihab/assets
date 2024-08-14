@@ -20,46 +20,6 @@ if (window.matchMedia('(display-mode: standalone)').matches) {
     // End Adding External JS to Head
 
     // Start Preloader Functions
-    // Function to show the preloader with fade-in animation
-    function fhsAppShowPreloader() {
-        // Your code to show the preloader
-    }
-
-    // Function to hide the preloader with fade-out animation
-    function fhsAppHidePreloader() {
-        // Your code to hide the preloader
-    }
-
-    // Event listener for when a link is clicked
-    document.addEventListener('click', function (event) {
-        var target = event.target;
-
-        // Check if the clicked element is an <a> tag
-        if (target.tagName.toLowerCase() === 'a') {
-            fhsAppShowPreloader();
-        }
-    });
-
-    // Event listener for when the new page has finished loading
-    window.addEventListener('load', function () {
-        // Hide the preloader after the new page has fully loaded
-        fhsAppHidePreloader();
-    });
-
-    // Event listener for when the page is shown (including back/forward navigation)
-    window.addEventListener('pageshow', function (event) {
-        // Check if the page is not from the cache (e.g., when navigating back)
-        if (event.persisted) {
-            // Hide the preloader
-            fhsAppHidePreloader();
-        }
-    });
-
-    // Event listener for when the user navigates away from the current page
-    window.addEventListener('beforeunload', function () {
-        // Show the preloader when the user navigates away
-        fhsAppShowPreloader();
-    });
     // End Preloader Functions
 
     document.addEventListener('DOMContentLoaded', () => {

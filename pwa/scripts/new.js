@@ -262,11 +262,6 @@ if (window.matchMedia('(display-mode: standalone)').matches) {
         // End Sidebar
 
         // Start Header
-        document.querySelector('.header-target-class').innerHTML += `
-            <div class="header-content">
-                <p>This content is always appended to the header.</p>
-            </div>
-        `;
         // End Header
 
         // Start Notifications
@@ -320,11 +315,6 @@ if (window.matchMedia('(display-mode: standalone)').matches) {
         // End Notifications
 
         // Start Bottom Navigation
-        document.querySelector('.bottom-nav-target-class').innerHTML += `
-            <div class="bottom-nav-content">
-                <p>This content is always appended to the bottom navigation.</p>
-            </div>
-        `;
         // End Bottom Navigation
 
         // Start Script for Light/Dark Mode

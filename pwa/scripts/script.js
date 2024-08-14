@@ -78,7 +78,7 @@ if (window.matchMedia('(display-mode: standalone)').matches) {
     document.addEventListener('DOMContentLoaded', () => {
         
         // Start Sidebar
-        document.querySelector('.sidebar-target-class').innerHTML += `
+        document.querySelector('.sidebar-html-class').innerHTML += `
 
             <div aria-hidden='true' aria-labelledby='exampleModalLabel' class='modal sidebarMenu -left fade' id='mdllSidebar-connected' tabindex='-1'>
    <div class='modal-dialog modal-dialog-scrollable'>
@@ -265,7 +265,7 @@ if (window.matchMedia('(display-mode: standalone)').matches) {
         // End Header
 
         // Start Notifications
-        document.querySelector('.notification-target-class').innerHTML += `
+        document.querySelector('.notification-html-class').innerHTML += `
 
             <div aria-hidden='true' aria-labelledby='modalFilterLabel' class='modal -left --fullScreen modal-collectibles fade' id='mdllCollectibles' tabindex='-1'>
   <div class='modal-dialog modal-dialog-scrollable'>

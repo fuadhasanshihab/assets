@@ -283,7 +283,7 @@ if (window.matchMedia('(display-mode: standalone)').matches) {
         <div class='un-details-collectibles'>
           <!-- body -->
           <div class='bodyy centerrrrr'>
-            <img alt='no-notification-yiran-removebg-preview' border='0' src='https://i.ibb.co/bRFHgTj/no-notification-yiran-removebg-preview.png' style='width:: 100%!important;'/>
+            <img alt='no-notification' border='0' src='https://i.ibb.co/bRFHgTj/no-notification-yiran-removebg-preview.png' style='width: 100%!important;'/>
           </div>
         </div>
       </div>

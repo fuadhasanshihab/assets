@@ -83,3 +83,61 @@ if (window.matchMedia('(display-mode: standalone)').matches) {
     }); // End DOMContentLoaded Event Listener
 
 } // End Match Media Check
+
+
+// preloader when link ckicked
+if (window.matchMedia('(display-mode: standalone)').matches) {
+   // Function to show the preloader with fade-in animation
+   function fhsAppShowPreloader() {
+      var preloader = document.querySelector('.fhs-app-preloader');
+      preloader.style.display = 'flex';
+      setTimeout(function () {
+         preloader.classList.add('show');
+      }, 10); // small delay to ensure transition
+
+      // Automatically hide preloader after 10 seconds
+      setTimeout(function () {
+         fhsAppHidePreloader();
+      }, 10000); // 10 seconds timeout
+   }
+
+   // Function to hide the preloader with fade-out animation
+   function fhsAppHidePreloader() {
+      var preloader = document.querySelector('.fhs-app-preloader');
+      preloader.classList.remove('show');
+      setTimeout(function () {
+         preloader.style.display = 'none';
+      }, 300); // wait for transition to complete before hiding
+   }
+
+   // Event listener for when a link is clicked
+   document.addEventListener('click', function (event) {
+      var target = event.target;
+
+      // Check if the clicked element is an <a> tag
+      if (target.tagName.toLowerCase() === 'a') {
+         fhsAppShowPreloader();
+      }
+   });
+
+   // Event listener for when the new page has finished loading
+   window.addEventListener('load', function () {
+      // Hide the preloader after the new page has fully loaded
+      fhsAppHidePreloader();
+   });
+
+   // Event listener for when the page is shown (including back/forward navigation)
+   window.addEventListener('pageshow', function (event) {
+      // Check if the page is not from the cache (e.g., when navigating back)
+      if (event.persisted) {
+         // Hide the preloader
+         fhsAppHidePreloader();
+      }
+   });
+
+   // Event listener for when the user navigates away from the current page
+   window.addEventListener('beforeunload', function () {
+      // Show the preloader when the user navigates away
+      fhsAppShowPreloader();
+   });
+}

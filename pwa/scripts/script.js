@@ -10,13 +10,13 @@ if (window.matchMedia('(display-mode: standalone)').matches) {
     `;
 
     // Add External JS to Head
-    document.querySelector('head').appendChild(document.createElement('script')).src = 'https://cdn.statically.io/gist/fuadhasanshihab/352bd105cf37a0afc655ffcd8f236baa/raw/925bfacb465c9d129437921541c1897020890a31/zuck.min.js';
+    document.querySelector('head').appendChild(document.createElement('script')).src = 'https://fuadhasanshihab.github.io/assets/pwa/scripts/zuck.min.js';
     document.querySelector('head').appendChild(document.createElement('script')).src = 'https://cdn.jsdelivr.net/npm/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js';
     document.querySelector('head').appendChild(document.createElement('script')).src = 'https://unpkg.com/swiper/swiper-bundle.min.js';
     document.querySelector('head').appendChild(document.createElement('script')).src = 'https://cdn.jsdelivr.net/npm/nouislider@15.7.0/dist/nouislider.min.js';
     document.querySelector('head').appendChild(document.createElement('script')).src = 'https://cdn.jsdelivr.net/npm/wnumb@1.2.0/wNumb.min.js';
     document.querySelector('head').appendChild(document.createElement('script')).src = 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js';
-    document.querySelector('head').appendChild(document.createElement('script')).src = 'https://cdn.statically.io/gist/fuadhasanshihab/352bd105cf37a0afc655ffcd8f236baa/raw/925bfacb465c9d129437921541c1897020890a31/fhs.app.custom.js';
+    document.querySelector('head').appendChild(document.createElement('script')).src = 'https://fuadhasanshihab.github.io/assets/pwa/scripts/app.js';
     // End Adding External JS to Head
 
     // Start Preloader Functions

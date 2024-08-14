@@ -329,17 +329,27 @@ if (window.matchMedia('(display-mode: standalone)').matches) {
 
         // Start Script for Light/Dark Mode
         document.querySelector('body').appendChild(document.createElement('script')).textContent = `
-            
+        
+        function modeL() {
+            document.body.classList.remove('dark-mode');
+            document.body.classList.add('light-mode');
+        }
+        function modeD() {
+            document.body.classList.remove('light-mode');
+            document.body.classList.add('dark-mode');
+        }
+        function toggleMode() {
+            const checkbox = document.getElementById('switchDark');
+            if (checkbox.checked) {
+                modeD();
+            } else {
+                modeL();
+            }
+        }
+        
         `;
         // End Script for Light/Dark Mode
 
     }); // End DOMContentLoaded Event Listener
 
 } // End Match Media Check
-
-
-
-
-
-
-

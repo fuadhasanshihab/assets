@@ -269,7 +269,7 @@ if (window.matchMedia('(display-mode: standalone)').matches) {
 
 <div aria-hidden='true' aria-labelledby='modalFilterLabel' class='modal -left --fullScreen modal-collectibles fade' id='mdllCollectibles' tabindex='-1'>
   <div class='modal-dialog modal-dialog-scrollable'>
-    <div class='centerr modal-content'>
+    <div class='centerr modal-content' style='padding-left:7.5%!important;padding-right:7.5%!important'>
       <div class='modal-header' style='padding: 30px 0!important;'>
         <div class=''>
           <h1>Notification</h1>

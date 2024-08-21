@@ -80,7 +80,7 @@ if (window.matchMedia('(display-mode: standalone)').matches) {
         // Start Sidebar
         document.querySelector('.sidebar-html-class').innerHTML += `
 
-            <div aria-hidden='true' aria-labelledby='exampleModalLabel' class='modal sidebarMenu -left fade' id='mdllSidebar-connected' tabindex='-1'>
+<div aria-hidden='true' aria-labelledby='exampleModalLabel' class='modal sidebarMenu -left fade' id='mdllSidebar-connected' tabindex='-1'>
    <div class='modal-dialog modal-dialog-scrollable'>
       <div class='modal-content'>
          <div class='modal-header d-block pb-1'>
@@ -267,9 +267,9 @@ if (window.matchMedia('(display-mode: standalone)').matches) {
         // Start Notifications
         document.querySelector('.notification-html-class').innerHTML += `
 
-            <div aria-hidden='true' aria-labelledby='modalFilterLabel' class='modal -left --fullScreen modal-collectibles fade' id='mdllCollectibles' tabindex='-1'>
+<div aria-hidden='true' aria-labelledby='modalFilterLabel' class='modal -left --fullScreen modal-collectibles fade' id='mdllCollectibles' tabindex='-1'>
   <div class='modal-dialog modal-dialog-scrollable'>
-    <div class='center modal-content'>
+    <div class='centerr modal-content'>
       <div class='modal-header' style='padding: 30px 0!important;'>
         <div class=''>
           <h1>Notification</h1>

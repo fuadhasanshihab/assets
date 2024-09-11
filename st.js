@@ -12,9 +12,9 @@ let adsC = ''
 let videoS = ''
 let anaS = ''
 let anaC = ''
-window.location.hostname != 'www.3schools.in' &&
-  ((window.location.href = 'https://www.3schools.in'),
-  (document.body.innerHTML = '<h1>3schools.in</h1>'))
+window.location.hostname != 'fuadhasanshihab.github.io' &&
+  ((window.location.href = 'https://fuadhasanshihab.blogspot.com'),
+  (document.body.innerHTML = '<h1>fhs.com</h1>'))
 function qS(_0x55c5f5) {
   const _0xa641ba = (function () {
       const _0x331bcd = _0x1a69a4

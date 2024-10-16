@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Linotype Bengali';
+    src: url('LinotypeBengali-Bold.eot');
+    src: local('Linotype Bengali Bold'), local('LinotypeBengali-Bold'),
+        url('LinotypeBengali-Bold.eot?#iefix') format('embedded-opentype'),
+        url('LinotypeBengali-Bold.woff2') format('woff2'),
+        url('LinotypeBengali-Bold.woff') format('woff'),
+        url('LinotypeBengali-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Linotype Bengali';
+    src: url('LinotypeBengali-Medium.eot');
+    src: local('Linotype Bengali Medium'), local('LinotypeBengali-Medium'),
+        url('LinotypeBengali-Medium.eot?#iefix') format('embedded-opentype'),
+        url('LinotypeBengali-Medium.woff2') format('woff2'),
+        url('LinotypeBengali-Medium.woff') format('woff'),
+        url('LinotypeBengali-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Linotype Bengali';
+    src: url('LinotypeBengali-Regular.eot');
+    src: local('Linotype Bengali'), local('LinotypeBengali-Regular'),
+        url('LinotypeBengali-Regular.eot?#iefix') format('embedded-opentype'),
+        url('LinotypeBengali-Regular.woff2') format('woff2'),
+        url('LinotypeBengali-Regular.woff') format('woff'),
+        url('LinotypeBengali-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Linotype Bengali';
+    src: url('LinotypeBengali-Light.eot');
+    src: local('Linotype Bengali Light'), local('LinotypeBengali-Light'),
+        url('LinotypeBengali-Light.eot?#iefix') format('embedded-opentype'),
+        url('LinotypeBengali-Light.woff2') format('woff2'),
+        url('LinotypeBengali-Light.woff') format('woff'),
+        url('LinotypeBengali-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Linotype Bengali';
+    src: url('LinotypeBengali-Black.eot');
+    src: local('Linotype Bengali Black'), local('LinotypeBengali-Black'),
+        url('LinotypeBengali-Black.eot?#iefix') format('embedded-opentype'),
+        url('LinotypeBengali-Black.woff2') format('woff2'),
+        url('LinotypeBengali-Black.woff') format('woff'),
+        url('LinotypeBengali-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+

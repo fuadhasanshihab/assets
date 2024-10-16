@@ -9,3 +9,39 @@ document.getElementById('map_inner').innerHTML = `
 <option class="thana-19" style="display:none" value="sarail">সরাইল</option><option class="thana-19" style="display:none" value="bijoynagar">বিজয়নগর</option><option class="thana-21" style="display:none" value="hathazari">হাটহাজারী</option><option class="thana-55" style="display:none" value="south-sunamganj">দক্ষিণ সুনামগঞ্জ</option><option class="thana-56" style="display:none" value="osmaninagor">ওসমানী নগর</option><option class="thana-52" style="display:none" value="indurkani">ইন্দুরকানী</option><option class="thana-55" style="display:none" value="Shantiganj">শান্তিগঞ্জ</option></select><div class="dist_news_srch">অনুসন্ধান করুন</div></div>
 
 `;
+
+
+
+/*-------Map Script Start-------*/
+    var lastSelectedValue = '';
+    $('select[name="bd_division"]').on('change', function(){
+        lastSelectedValue = $(this).find('option:selected').text();
+        var sel_div = $(this).val();
+        $('select[name="bd_district"] option').css('display','none');
+        $('select[name="bd_district"] .dist-' + sel_div).css('display','block');
+    });
+
+    $('select[name="bd_district"]').on('change', function(){
+        lastSelectedValue = $(this).find('option:selected').text();
+        var sel_div = $(this).val();
+        $('select[name="bd_thana"] option').css('display','none');
+        $('select[name="bd_thana"] .thana-' + sel_div).css('display','block');
+    });
+
+    $('select[name="bd_thana"]').on('change', function(){
+        lastSelectedValue = $(this).find('option:selected').text();
+    });
+
+    $('.dist_news_srch').on('click', function(){
+        if (lastSelectedValue === '') {
+            alert('Please select a value first');
+            $('select[name="bd_division"]').focus();
+            return false;
+        }
+
+        var URL = '/search?q=' + encodeURIComponent(lastSelectedValue);
+        window.location.href = URL;
+
+        return false;
+    });
+    /*------Map Script End-----*/

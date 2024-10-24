@@ -1,0 +1,22 @@
+/* font-styles.css */
+@font-face {
+    font-family: 'SolaimanLipi';
+    src: url('https://cdn.jsdelivr.net/gh/fuadhasanshihab/assets@main/fonts/Solaimanlipi/solaimanlipi-thin.woff2?v=1.0') format('woff2');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'SolaimanLipi';
+    src: url('https://cdn.jsdelivr.net/gh/fuadhasanshihab/assets@main/fonts/Solaimanlipi/solaimanlipi-normal.woff2?v=1.0') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'SolaimanLipi';
+    src: url('https://cdn.jsdelivr.net/gh/fuadhasanshihab/assets@main/fonts/Solaimanlipi/solaimanlipi-bold.woff2?v=1.0') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
